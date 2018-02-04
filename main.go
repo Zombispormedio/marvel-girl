@@ -10,7 +10,7 @@ import (
 )
 
 func index(ctx *fasthttp.RequestCtx) {
-	fmt.Fprint(ctx, "Hello World")
+	fmt.Fprint(ctx, "Hello, Hot")
 }
 
 func main() {
@@ -24,5 +24,6 @@ func main() {
 	router.GET("/", index)
 
 	err := fasthttp.ListenAndServe(":"+port, router.Handler)
+	fmt.Println("Server connected at " + port)
 	log.Fatal(err)
 }

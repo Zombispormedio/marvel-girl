@@ -1,7 +1,5 @@
 build:
 	CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o marvel-girl .
-clean:
-	rm build
 before_install: 
 	wget https://dl.google.com/go/go1.9.3.linux-amd64.tar.gz
 	sudo tar -C /usr/local -xzf go1.9.3.linux-amd64.tar.gz
