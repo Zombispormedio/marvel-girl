@@ -4,6 +4,10 @@ branches:
     - master
 go:
   - master
+env:
+  - CGO_ENABLED=0 
+  - GOOS=linux
 script:
-  - make build
-  - ls
+  - go get github.com/tj/robo
+  - robo dependencies
+  - robo build

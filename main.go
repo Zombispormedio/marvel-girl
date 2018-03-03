@@ -1,29 +1,13 @@
 package main
 
-import (
-	"fmt"
-	"log"
-	"os"
-
-	"github.com/buaazp/fasthttprouter"
-	"github.com/valyala/fasthttp"
-)
-
-func index(ctx *fasthttp.RequestCtx) {
-	fmt.Fprint(ctx, "Hello, Hot")
-}
+import "github.com/gin-gonic/gin"
 
 func main() {
-	port := os.Getenv("PORT")
-
-	if port == "" {
-		log.Fatal("$PORT must be set")
-	}
-
-	router := fasthttprouter.New()
-	router.GET("/", index)
-
-	err := fasthttp.ListenAndServe(":"+port, router.Handler)
-	fmt.Println("Server connected at " + port)
-	log.Fatal(err)
+	r := gin.Default()
+	r.GET("/", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "Hello, there",
+		})
+	})
+	r.Run()
 }
