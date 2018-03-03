@@ -3,58 +3,76 @@
 	"ignore": "test",
 	"package": [
 		{
-			"checksumSHA1": "bFonfy+MvxjOVMQAMqLfUzTeAeA=",
-			"path": "github.com/buaazp/fasthttprouter",
-			"revision": "29a27c70315770a2344e11847de85648512717e7",
-			"revisionTime": "2017-10-12T10:13:57Z"
+			"checksumSHA1": "BhMowD2DIKSd9qq8Pzh7Y3mh2/w=",
+			"path": "github.com/gin-contrib/sse",
+			"revision": "22d885f9ecc78bf4ee5d72b937e4bbcdc58e8cae",
+			"revisionTime": "2017-01-09T09:34:21Z"
 		},
 		{
-			"checksumSHA1": "tqNT23AcXaNZLjvAX/qo7G13OKk=",
-			"path": "github.com/klauspost/compress/flate",
-			"revision": "b88785bfd699aa994985ea91b90ee8a1721c3fe1",
-			"revisionTime": "2018-01-10T20:30:47Z"
+			"checksumSHA1": "xnd2LmPzEBQEUPQUVHoMM+N2F98=",
+			"path": "github.com/gin-gonic/gin",
+			"revision": "b8b68314faa067acae5b17c828127b04af51ebe2",
+			"revisionTime": "2017-09-29T08:48:10Z"
 		},
 		{
-			"checksumSHA1": "rO+kZTobMQp2VTLPrxLovqFWz3U=",
-			"path": "github.com/klauspost/compress/gzip",
-			"revision": "b88785bfd699aa994985ea91b90ee8a1721c3fe1",
-			"revisionTime": "2018-01-10T20:30:47Z"
+			"checksumSHA1": "PePSxlMHBb/Cj46+/PK/iCbcNGQ=",
+			"path": "github.com/gin-gonic/gin/binding",
+			"revision": "b8b68314faa067acae5b17c828127b04af51ebe2",
+			"revisionTime": "2017-09-29T08:48:10Z"
 		},
 		{
-			"checksumSHA1": "tyO2QCRaqKdoRFNc5bU2tVRK6x8=",
-			"path": "github.com/klauspost/compress/zlib",
-			"revision": "b88785bfd699aa994985ea91b90ee8a1721c3fe1",
-			"revisionTime": "2018-01-10T20:30:47Z"
+			"checksumSHA1": "+UgLC+h5OGeymvpZEIYnDCFWctA=",
+			"path": "github.com/gin-gonic/gin/json",
+			"revision": "b8b68314faa067acae5b17c828127b04af51ebe2",
+			"revisionTime": "2017-09-29T08:48:10Z"
 		},
 		{
-			"checksumSHA1": "hmGOqZUrj05QVwyFjo5fybMH1w8=",
-			"path": "github.com/klauspost/cpuid",
-			"revision": "ae832f27941af41db13bd6d8efd2493e3b22415a",
-			"revisionTime": "2018-01-02T08:10:00Z"
+			"checksumSHA1": "s4/K+U7H8lKxLAsq2cXDpCUiCv4=",
+			"path": "github.com/gin-gonic/gin/render",
+			"revision": "b8b68314faa067acae5b17c828127b04af51ebe2",
+			"revisionTime": "2017-09-29T08:48:10Z"
 		},
 		{
-			"checksumSHA1": "x6+Vi9WumwYUrK8ZUmkGLDgOLtc=",
-			"path": "github.com/valyala/bytebufferpool",
-			"revision": "e746df99fe4a3986f4d4f79e13c1e0117ce9c2f7",
-			"revisionTime": "2016-08-17T18:16:52Z"
+			"checksumSHA1": "cRxfZM32wP1Ry67s3jLRoYxAz/E=",
+			"path": "github.com/golang/protobuf/proto",
+			"revision": "130e6b02ab059e7b717a096f397c5b60111cae74",
+			"revisionTime": "2017-09-20T22:06:47Z"
 		},
 		{
-			"checksumSHA1": "0T+7F5FnaeBjc2sCdE+wVkOptr0=",
-			"path": "github.com/valyala/fasthttp",
-			"revision": "e5f51c11919d4f66400334047b897ef0a94c6f3c",
-			"revisionTime": "2017-12-07T12:09:41Z"
+			"checksumSHA1": "tzVznmFHWJOIHk4c+UAmcT+BaHg=",
+			"path": "github.com/json-iterator/go",
+			"revision": "abbd16da6c9d374cb5da8907ec2355bd3571f80e",
+			"revisionTime": "2017-08-02T01:20:43Z"
 		},
 		{
-			"checksumSHA1": "PR0VJo4sMXprWz+/zeKnLH9Yw/k=",
-			"path": "github.com/valyala/fasthttp/fasthttputil",
-			"revision": "e5f51c11919d4f66400334047b897ef0a94c6f3c",
-			"revisionTime": "2017-12-07T12:09:41Z"
+			"checksumSHA1": "bZ69Fu47mpdJ30Y5DMfR8IsIc0E=",
+			"path": "github.com/mattn/go-isatty",
+			"revision": "a5cdd64afdee435007ee3e9f6ed4684af949d568",
+			"revisionTime": "2017-09-25T05:49:04Z"
 		},
 		{
-			"checksumSHA1": "0l/kTZy4cwC8P71DIi0CynmX4Bg=",
-			"path": "github.com/valyala/fasthttp/stackless",
-			"revision": "e5f51c11919d4f66400334047b897ef0a94c6f3c",
-			"revisionTime": "2017-12-07T12:09:41Z"
+			"checksumSHA1": "a6fK7g9dYEOs3TIdX3KsUrkO488=",
+			"path": "github.com/ugorji/go/codec",
+			"revision": "50530d8d1478c8bbfbdb18cbf5465db9aee6ada4",
+			"revisionTime": "2017-10-11T09:13:35Z"
+		},
+		{
+			"checksumSHA1": "Tkb1hBdBWeO7SGjixS2Hm48F6+s=",
+			"path": "golang.org/x/sys/unix",
+			"revision": "0b25a408a50076fbbcae6b7ac0ea5fbb0b085e79",
+			"revisionTime": "2017-06-08T11:43:49Z"
+		},
+		{
+			"checksumSHA1": "q190bL03wQok3wVwYmMub2XhOiU=",
+			"path": "gopkg.in/go-playground/validator.v8",
+			"revision": "5f1438d3fca68893a817e4a66806cea46a9e4ebf",
+			"revisionTime": "2017-07-30T05:02:35Z"
+		},
+		{
+			"checksumSHA1": "aUDnhyGTHeiMERx4L4jx/zLsvSQ=",
+			"path": "gopkg.in/yaml.v2",
+			"revision": "eb3733d160e74a9c7e442f435eb3bea458e1d19f",
+			"revisionTime": "2017-08-12T16:00:11Z"
 		}
 	],
 	"rootPath": "github.com/Zombispormedio/marvelous"

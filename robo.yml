@@ -2,10 +2,12 @@ start:
   command: go run main.go
 develop:
   command: gin --bin marvelous run main.go
+add:
+  command: govendor add +external
 dependencies:
   command: |
      go get -u github.com/kardianos/govendor
-     govendor add +external
+     govendor install +local
 build:
   command: CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o marvel-girl .
 docker-build:
