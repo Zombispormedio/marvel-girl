@@ -9,4 +9,9 @@ defmodule MarvelousWeb.Router do
     pipe_through :api 
     get "/", RootController, :index
   end
+
+  scope "/bot", MarvelousWeb do
+    pipe_through :api 
+    post "/", BotController, :execute
+  end
 end
