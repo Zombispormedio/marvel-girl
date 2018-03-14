@@ -1,9 +1,8 @@
 defmodule MarvelousWeb.BotController do
     use MarvelousWeb, :controller
   
-    def execute(conn, params) do
-        IO.inspect params
-        response = "This is a sample response from your webhook!"
+    def execute(conn, %{"result" => %{"parameters" => %{"geo-city" => city}}}) do
+        response = "The Weather in #{city} is good"
         render(conn, "response.json", response: response)
     end
   end
