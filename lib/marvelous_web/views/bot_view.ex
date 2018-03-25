@@ -34,11 +34,7 @@ defmodule MarvelousWeb.BotView do
       ],
       data: %{
         telegram: %{
-          text: text,
-          imageUrl: imageUrl,
-          subtitle: name,
-          title: "#{volume_name} ##{issue_number}",
-          type: 1
+          text: text
         }
       }
     }
