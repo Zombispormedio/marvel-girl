@@ -7,10 +7,27 @@ defmodule MarvelousWeb.BotView do
 
   def render("last_issue.json", %{data: issue}) do
     %{
+      "image" => %{"small_url" => imageUrl},
+      "name" => name,
+      "issue_number" => issue_number,
+      "volume" => %{"name" => volume_name}
+    } = issue
+
+    text =
+      gettext(
+        "The last issue is %{volume_name} #%{issue_number}: %{name}",
+        volume_name: volume_name,
+        issue_number: issue_number,
+        name: name
+      )
+
+    %{
+      speech: text,
+      displayText: text,
       messages: %{
-        imageUrl: issue["image"]["small_url"],
-        subtitle: issue["name"],
-        title: "#{issue["volume"]["name"]} ##{issue["issue_number"]}",
+        imageUrl: imageUrl,
+        subtitle: name,
+        title: "#{volume_name} ##{issue_number}",
         type: 1
       }
     }
