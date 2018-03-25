@@ -20,10 +20,10 @@ defmodule MarvelousWeb.BotController do
     end
   end
 
-  defp build_speech(_result) do
-    {:ok, "text.json", "I'm not sure about that"}
+  defp build_speech(%{"action" => "input.welcome"}) do
   end
 
-  defp build_speech(%{"action" => "input.welcome"}) do
+  defp build_speech(_result) do
+    {:ok, "text.json", "I'm not sure about that"}
   end
 end
