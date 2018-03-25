@@ -14,17 +14,21 @@ defmodule MarvelousWeb.BotController do
   end
 
   defp build_speech(%{"action" => "issue.last", "parameters" => %{"volume" => volume}}) do
-    issue = ComicVine.get_last_issue(name: volume)
+    issue = ComicVine.get_last_issue(volume: volume)
 
-    text =
-      gettext(
-        "The last issue is %{volume_name} #%{issue_number}: %{name}",
-        volume_name: issue["volume_name"],
-        issue_number: issue["issue_number"],
-        name: issue["name"]
-      )
+    case issue do
+      nil ->
+        {:ko}
 
-    {:ok, text}
+      _ ->
+        {:ok,
+         gettext(
+           "The last issue is %{volume_name} #%{issue_number}: %{name}",
+           volume_name: issue["volume"]["name"],
+           issue_number: issue["issue_number"],
+           name: issue["name"]
+         )}
+    end
   end
 
   defp build_speech(_result) do
