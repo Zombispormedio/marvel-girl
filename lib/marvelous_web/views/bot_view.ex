@@ -22,27 +22,21 @@ defmodule MarvelousWeb.BotView do
       )
 
     %{
-      # speech: text,
-      # displayText: text,
-      # messages: [
-      #   %{
-      #     imageUrl: imageUrl,
-      #     subtitle: name,
-      #     title: "#{volume_name} ##{issue_number}",
-      #     type: 1
-      #   }
-      # ]
-      contextOut: [
+      speech: text,
+      displayText: text,
+      messages: [
         %{
-          name: "issue",
-          lifespan: 5,
-          parameters: %{
-            imageUrl: imageUrl,
-            subtitle: name,
-            title: "#{volume_name} ##{issue_number}"
-          }
+          imageUrl: imageUrl,
+          subtitle: name,
+          title: "#{volume_name} ##{issue_number}",
+          type: 1
         }
-      ]
+      ],
+      data: %{
+        telegram: %{
+          text: text
+        }
+      }
     }
   end
 end
