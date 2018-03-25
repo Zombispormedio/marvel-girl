@@ -5,7 +5,7 @@ defmodule MarvelousWeb.BotController do
     IO.inspect(result)
 
     case build_speech(result) do
-      {:ok, text} -> render(conn, "default.json", text: text)
+      {:ok, template, data} -> render(conn, template, data: data)
       _ -> send_resp(conn, 400, "")
     end
   end
@@ -17,21 +17,12 @@ defmodule MarvelousWeb.BotController do
     issue = ComicVine.get_last_issue(volume: volume)
 
     case issue do
-      nil ->
-        {:ko}
-
-      _ ->
-        {:ok,
-         gettext(
-           "The last issue is %{volume_name} #%{issue_number}: %{name}",
-           volume_name: issue["volume"]["name"],
-           issue_number: issue["issue_number"],
-           name: issue["name"]
-         )}
+      nil -> {:ko}
+      _ -> {:ok, "last_issue.json", issue}
     end
   end
 
   defp build_speech(_result) do
-    {:ok, "I'm not sure about that"}
+    {:ok, "text.json", "I'm not sure about that"}
   end
 end

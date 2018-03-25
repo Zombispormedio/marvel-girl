@@ -7,7 +7,7 @@ defmodule ComicVine do
       query: %{
         filter: "volume:#{volume}",
         sort: "cover_date:desc",
-        field_list: "volume,issue_number,name",
+        field_list: "volume,issue_number,name,image",
         limit: 1
       }
     ).body["results"]
