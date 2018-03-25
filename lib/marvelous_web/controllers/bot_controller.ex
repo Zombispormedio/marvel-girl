@@ -3,17 +3,24 @@ defmodule MarvelousWeb.BotController do
   
     def execute(conn, %{ "result" => result }) do
         IO.inspect result
-        response = makeResponse(result)
-        render(conn, "response.json", response: response)
+        case build_speech(result) do
+            {:ok, text} -> render(conn, "default.json", text: text)
+            _ -> send_resp(conn, 400, "")
+        end
     end
 
-    defp makeResponse(%{ "action" => "get_last_issue", "parameters" => parameters }) do
+    defp build_speech(%{"action" => "input.welcome"}) do
+    end
+
+    defp build_speech(%{ "action" => "issue.last", "parameters" => parameters }) do
         IO.inspect parameters
-        "I'm getting the last issue"
+        { :ok, "I'm getting the last issue" }
     end
 
-    defp makeResponse(_result) do
-        "I'm not sure about that"
+    defp build_speech(_result) do
+        { :ok, "I'm not sure about that" }
     end
+
+
   end
   

@@ -1,8 +1,8 @@
 defmodule MarvelousWeb.BotView do
     use MarvelousWeb, :view
   
-    def render("response.json",  %{response: response}) do
-      %{speech: response, displayText: response}
+    def render("default.json",  %{text: text}) do
+      %{speech: text, displayText: text}
     end
 end
   
