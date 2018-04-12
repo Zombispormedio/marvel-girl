@@ -2,7 +2,9 @@ defmodule MarvelousWeb.BotController do
   use MarvelousWeb, :controller
 
   def execute(conn, params) do
+    IO.puts("╔═════════════════════════════════════════════╗")
     IO.inspect(params)
+    IO.puts("╚═════════════════════════════════════════════╝")
     %{"result" => result, "lang" => lang} = params
     set_locale(lang)
 
