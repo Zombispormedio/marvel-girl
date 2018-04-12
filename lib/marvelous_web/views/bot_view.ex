@@ -41,12 +41,7 @@ defmodule MarvelousWeb.BotView do
           platform: "google",
           type: "basic_card"
         }
-      ],
-      data: %{
-        telegram: %{
-          text: text
-        }
-      }
+      ]
     }
   end
 end
