@@ -4,12 +4,17 @@ defmodule MarvelousWeb.BotController do
   def execute(conn, params) do
     IO.inspect(params)
     %{"result" => result, "lang" => lang} = params
-    Gettext.put_locale(lang)
+    set_locale(lang)
 
     case build_speech(result) do
       {:ok, template, data} -> render(conn, template, data: data)
       _ -> send_resp(conn, 400, "")
     end
+  end
+
+  defp set_locale(lang) do
+    [locale | _] = String.split(lang, "-")
+    Gettext.put_locale(locale)
   end
 
   defp build_speech(%{"action" => "issue.last", "parameters" => %{"volume" => volume}}) do
