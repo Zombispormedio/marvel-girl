@@ -32,6 +32,7 @@ defmodule MarvelousWeb.BotView do
           subtitle: name,
           title: "#{volume_name} ##{issue_number}",
           platform: "google",
+          accessibility_text: text,
           type: "basic_card"
         }
       ]
