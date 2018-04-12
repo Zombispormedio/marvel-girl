@@ -26,13 +26,6 @@ defmodule MarvelousWeb.BotView do
       displayText: text,
       messages: [
         %{
-          imageUrl: imageUrl,
-          subtitle: name,
-          title: "#{volume_name} ##{issue_number}",
-          platform: "telegram",
-          type: 1
-        },
-        %{
           image: %{
             url: imageUrl
           },
