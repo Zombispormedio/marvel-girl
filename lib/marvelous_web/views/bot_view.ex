@@ -29,7 +29,17 @@ defmodule MarvelousWeb.BotView do
           imageUrl: imageUrl,
           subtitle: name,
           title: "#{volume_name} ##{issue_number}",
+          platform: "telegram",
           type: 1
+        },
+        %{
+          image: %{
+            url: imageUrl
+          },
+          subtitle: name,
+          title: "#{volume_name} ##{issue_number}",
+          platform: "google",
+          type: "basic_card"
         }
       ],
       data: %{

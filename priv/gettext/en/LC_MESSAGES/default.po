@@ -1,2 +1,4 @@
 msgid "The last issue is %{volume_name} #%{issue_number}: %{name}"
 msgstr "The last issue is %{volume_name} #%{issue_number}: %{name}"
+msgid "I'm not sure about that"
+msgstr "I'm not sure about that"

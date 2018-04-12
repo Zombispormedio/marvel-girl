@@ -3,7 +3,8 @@ defmodule MarvelousWeb.BotController do
 
   def execute(conn, params) do
     IO.inspect(params)
-    %{"result" => result} = params
+    %{"result" => result, "lang" => lang} = params
+    Gettext.put_locale(lang)
 
     case build_speech(result) do
       {:ok, template, data} -> render(conn, template, data: data)
@@ -24,6 +25,6 @@ defmodule MarvelousWeb.BotController do
   end
 
   defp build_speech(_result) do
-    {:ok, "text.json", "I'm not sure about that"}
+    {:ok, "text.json", gettext("I'm not sure about that")}
   end
 end

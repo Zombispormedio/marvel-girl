@@ -11,6 +11,11 @@ msgid ""
 msgstr ""
 
 #, elixir-format
-#: lib/marvelous_web/controllers/bot_controller.ex:20
+#: lib/marvelous_web/views/bot_view.ex:17
 msgid "The last issue is %{volume_name} #%{issue_number}: %{name}"
+msgstr ""
+
+#, elixir-format
+#: lib/marvelous_web/controllers/bot_controller.ex:28
+msgid "I'm not sure about that"
 msgstr ""
