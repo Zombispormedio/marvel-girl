@@ -26,6 +26,12 @@ defmodule MarvelousWeb.BotView do
       displayText: text,
       messages: [
         %{
+          displayText: text,
+          platform: "google",
+          textToSpeech: text,
+          type: "simple_response"
+        },
+        %{
           image: %{
             url: imageUrl,
             accessibility_text: text
