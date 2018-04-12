@@ -27,12 +27,12 @@ defmodule MarvelousWeb.BotView do
       messages: [
         %{
           image: %{
-            url: imageUrl
+            url: imageUrl,
+            accessibility_text: text
           },
           subtitle: name,
           title: "#{volume_name} ##{issue_number}",
           platform: "google",
-          accessibility_text: text,
           type: "basic_card"
         }
       ]
