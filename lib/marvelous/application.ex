@@ -6,9 +6,9 @@ defmodule Marvelous.Application do
   def start(_type, _args) do
     import Supervisor.Spec
 
-    unless Mix.env() == :prod do
-      Envy.auto_load()
-    end
+    # unless Mix.env() == :prod do
+    # Envy.auto_load()
+    # end
 
     # Define workers and child supervisors to be supervised
     children = [
