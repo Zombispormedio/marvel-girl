@@ -17,7 +17,7 @@ config :marvelous, MarvelousWeb.Endpoint,
   load_from_system_env: true,
   url: [scheme: "https", host: "marvel-girl.herokuapp.com", port: 443],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
-  secret_key_base: Map.fetch!(System.get_env(), "SECRET_KEY_BASE")
+  secret_key_base: Utils.get_secret_key()
 
 # Do not print debug messages in production
 config :logger, level: :info

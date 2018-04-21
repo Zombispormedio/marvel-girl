@@ -39,7 +39,8 @@ defmodule Marvelous.Mixfile do
       {:tesla, "~> 0.10.0"},
       {:hackney, "~> 1.6"},
       {:poison, ">= 1.0.0"},
-      {:envy, "~> 1.1.1"}
+      {:envy, "~> 1.1.1"},
+      {:distillery, "~> 1.0.0"}
     ]
   end
 end
