@@ -5,13 +5,22 @@ defmodule MarvelousWeb.BotController do
     IO.puts("╔═════════════════════════════════════════════╗")
     IO.inspect(params)
     IO.puts("╚═════════════════════════════════════════════╝")
-    %{"queryResult" => result} = params
-    set_locale(result["languageCode"])
+    %{version: version, result: result} = dispatch(params)
 
     case build_speech(result) do
-      {:ok, template, data} -> render(conn, template, data: data)
+      {:ok, template, data} -> render(conn, template, data: data, version: version)
       _ -> send_resp(conn, 400, "")
     end
+  end
+
+  defp dispatch(%{"result" => result, "lang" => lang}) do
+    set_locale(lang)
+    %{version: :v1, result: result}
+  end
+
+  defp dispatch(%{"queryResult" => result}) do
+    set_locale(result["languageCode"])
+    %{version: :v2, result: result}
   end
 
   defp set_locale(lang) when lang == nil do
