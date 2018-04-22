@@ -44,7 +44,26 @@ defmodule MarvelousWeb.BotView do
             }
           }
         }
-      ]
+      ],
+      payload: %{
+        google: %{
+          expectUserResponse: false,
+          richResponse: %{
+            items: [
+              %{
+                basicCard: %{
+                  subtitle: name,
+                  title: "#{volume_name} ##{issue_number}",
+                  image: %{
+                    image_uri: imageUrl,
+                    accessibility_text: text
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
     }
   end
 end
