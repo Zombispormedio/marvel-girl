@@ -35,10 +35,14 @@ defmodule MarvelousWeb.BotView do
           }
         },
         %{
-          card: %{
+          platform: "google",
+          basic_card: %{
             subtitle: name,
             title: "#{volume_name} ##{issue_number}",
-            imageUri: imageUrl
+            image: %{
+              url: imageUrl,
+              accessibility_text: text
+            }
           }
         }
       ]
