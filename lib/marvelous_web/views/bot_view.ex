@@ -2,7 +2,7 @@ defmodule MarvelousWeb.BotView do
   use MarvelousWeb, :view
 
   def render("text.json", %{data: text}) do
-    %{speech: text, displayText: text}
+    %{fulfillmentText: text}
   end
 
   def render("last_issue.json", %{data: issue}) do
@@ -22,24 +22,23 @@ defmodule MarvelousWeb.BotView do
       )
 
     %{
-      speech: text,
-      displayText: text,
-      messages: [
+      fulfillmentText: text,
+      fulfillmentMessages: [
         %{
-          displayText: text,
-          platform: "google",
-          textToSpeech: text,
-          type: "simple_response"
-        },
-        %{
-          image: %{
-            url: imageUrl,
-            accessibility_text: text
-          },
-          subtitle: name,
-          title: "#{volume_name} ##{issue_number}",
-          platform: "google",
-          type: "basic_card"
+          simpleResponses: [
+            %{
+              displayText: text,
+              textToSpeech: text
+            }
+          ],
+          basicCard: %{
+            subtitle: name,
+            title: "#{volume_name} ##{issue_number}",
+            image: %{
+              url: imageUrl,
+              accessibility_text: text
+            }
+          }
         }
       ]
     }
