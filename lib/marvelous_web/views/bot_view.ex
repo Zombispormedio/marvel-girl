@@ -30,7 +30,9 @@ defmodule MarvelousWeb.BotView do
               displayText: text,
               textToSpeech: text
             }
-          ],
+          ]
+        },
+        %{
           basicCard: %{
             subtitle: name,
             title: "#{volume_name} ##{issue_number}",
