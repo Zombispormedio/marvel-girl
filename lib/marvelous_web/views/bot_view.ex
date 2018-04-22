@@ -25,23 +25,10 @@ defmodule MarvelousWeb.BotView do
       fulfillmentText: text,
       fulfillmentMessages: [
         %{
-          simpleResponses: %{
-            simpleResponses: [
-              %{
-                displayText: text,
-                textToSpeech: text
-              }
+          text: %{
+            text: [
+              text
             ]
-          }
-        },
-        %{
-          basicCard: %{
-            subtitle: name,
-            title: "#{volume_name} ##{issue_number}",
-            image: %{
-              image_uri: imageUrl,
-              accessibility_text: text
-            }
           }
         }
       ],
@@ -50,6 +37,12 @@ defmodule MarvelousWeb.BotView do
           expectUserResponse: false,
           richResponse: %{
             items: [
+              %{
+                simpleResponse: %{
+                  displayText: text,
+                  textToSpeech: text
+                }
+              },
               %{
                 basicCard: %{
                   subtitle: name,
