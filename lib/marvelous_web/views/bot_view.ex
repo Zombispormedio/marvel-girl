@@ -39,8 +39,8 @@ defmodule MarvelousWeb.BotView do
             subtitle: name,
             title: "#{volume_name} ##{issue_number}",
             image: %{
-              url: imageUrl,
-              accessibility_text: text
+              imageUri: imageUrl,
+              accessibilityText: text
             }
           }
         }
