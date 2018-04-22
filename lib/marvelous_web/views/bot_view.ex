@@ -25,12 +25,14 @@ defmodule MarvelousWeb.BotView do
       fulfillmentText: text,
       fulfillmentMessages: [
         %{
-          simpleResponses: [
-            %{
-              displayText: text,
-              textToSpeech: text
-            }
-          ]
+          simpleResponses: %{
+            simpleResponses: [
+              %{
+                displayText: text,
+                textToSpeech: text
+              }
+            ]
+          }
         },
         %{
           basicCard: %{
